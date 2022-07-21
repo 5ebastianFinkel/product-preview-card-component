@@ -11,6 +11,8 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: var(--neutral-gray-blue);
+
+    box-sizing: border-box;
 }
 
 body {
@@ -35,13 +37,13 @@ image {
 }
 
 .cart-button {
-    margin: 1rem;
+    height: 3rem;
     font-family: inherit;
     color: var(--neutral-white);
     width: 100%;
     background: var(--primary-cyan);
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -64,6 +66,8 @@ image {
 .container-price {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 1rem;
+    align-items: center;
 }
 
 .current-price {
