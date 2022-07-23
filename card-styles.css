@@ -2,6 +2,7 @@
 
 :root {
     --primary-cyan: hsl(158, 36%, 37%);
+    --primary-cyan-hover: hsl(158, 36%, 23%) ;
     --primary-cream: hsl(30, 30%, 92%);
 
     --neutral--dark-blue: hsl(212, 21%, 14%);
@@ -36,7 +37,7 @@ h1 {
 }
 
 p {
-    font-size: 14px;
+    font-size: var(--base-font-size);
 }
 
 .superheader {
@@ -63,7 +64,7 @@ p {
 }
 
 .cart-button:hover {
-    background: var(--neutral--dark-blue);
+    background: var(--primary-cyan-hover);
 }
 
 .card {
@@ -92,6 +93,7 @@ p {
     grid-template-columns: 1fr 1fr;
     padding-bottom: 1rem;
     align-items: center;
+    gap: 1rem;
 }
 
 .current-price {
@@ -102,4 +104,19 @@ p {
 
 .old-price {
     text-decoration: line-through;
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+        max-width: 540px;
+    }
+
+    .container-image {
+        background-image: url("images/image-product-desktop.jpg");
+        width: 270px;
+        aspect-ratio: 2 / 3.1;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+    }
 }
