@@ -8,6 +8,12 @@
     --neutral-gray-blue: hsl(228, 12%, 48%);
     --neutral-white: hsl(0, 0%, 100%);
 
+    --width-mobile: 340px;
+    --width-desktop: 800px;
+    --base-font-size: 14px;
+
+    --border-radius: 10px;
+
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: var(--neutral-gray-blue);
@@ -26,24 +32,28 @@ body {
 h1 {
     font-family: 'Fraunces', serif;
     color: var(--neutral--dark-blue);
+    margin-top: .2rem;
+}
+
+p {
+    font-size: 14px;
 }
 
 .superheader {
-}
-
-image {
-    object-fit: cover;
-
+    letter-spacing: .2rem;
+    color: var(--neutral-gray-blue);
+    font-size: var(--base-font-size);
 }
 
 .cart-button {
     height: 3rem;
     font-family: inherit;
+    font-weight: 700;
     color: var(--neutral-white);
     width: 100%;
     background: var(--primary-cyan);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     text-align: center;
 }
 
@@ -52,15 +62,29 @@ image {
     margin-inline: .5rem;
 }
 
+.cart-button:hover {
+    background: var(--neutral--dark-blue);
+}
+
 .card {
     display: grid;
-    grid-auto-columns: 375px;
+    grid-auto-columns: var(--width-mobile);
     background: var(--neutral-white);
     border-radius: 1rem;
 }
 
+.container-image {
+    width: var(--width-mobile);
+    aspect-ratio: 1.429;
+    background-image: url("images/image-product-mobile.jpg");
+    background-size: cover;
+    overflow: hidden;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
 .container-text {
-    padding: 1rem;
+    padding: 1.4rem;
 }
 
 .container-price {
@@ -77,6 +101,5 @@ image {
 }
 
 .old-price {
-    text-line-through: single;
-    text-line-through-color: var(--neutral-gray-blue);
+    text-decoration: line-through;
 }
